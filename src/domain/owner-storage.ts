@@ -15,7 +15,7 @@ export interface EditableInstagramPost {
   title: string;
   excerpt: string;
   imageSrc: string;
-  mediaType?: 'image' | 'video';
+  mediaType?: 'image' | 'video' | string;
   videoSrc?: string | null;
   permalink: string;
   publishedAt: string | null;
