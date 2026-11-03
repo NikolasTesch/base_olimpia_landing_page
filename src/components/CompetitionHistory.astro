@@ -1,0 +1,4 @@
+---
+import Heading from './SectionHeading.astro';const {content}=Astro.props;
+---
+<section id="competicoes" class="soft"><div class="container"><Heading eyebrow="04 / CAMINHADA ESPORTIVA" title={content.title} description={content.description}/><div class="grid two"><article class="editorial-card"><span class="number">↗</span><h3>Competições</h3><p>{content.emptyCompetitions}</p></article><article class="editorial-card"><span class="number">✳</span><h3>Conquistas</h3><p>{content.emptyAchievements}</p></article></div></div></section>

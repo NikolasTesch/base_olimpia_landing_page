@@ -1,0 +1,267 @@
+{
+  "preparedAt": "2026-11-01",
+  "algorithm": "SHA-256",
+  "manifestExcludesItself": true,
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 65,
+      "sha256": "754109afdcac41a1ac52164c947e423f6362118e57d03141747bb22a9156a9d1"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 3314,
+      "sha256": "7d01147e25cc08727962414e09cb030dd48906e7e41c562d13c0d917a93ab530"
+    },
+    {
+      "path": "ARCHITECTURE.md",
+      "bytes": 13243,
+      "sha256": "d21488d8bb86968b3b1dab170673329fe7ac642580437dc18153af183236de0f"
+    },
+    {
+      "path": "astro.config.mjs",
+      "bytes": 80,
+      "sha256": "37c3d7811adce6d8e301e0864fc5d7b64016b02ec4ecaea5dc096ce7c87f0382"
+    },
+    {
+      "path": "CONTENT.md",
+      "bytes": 5752,
+      "sha256": "1369b3d3b261c08f36f420e117bdf5a121e08e3a2855cf949f4e80885611905f"
+    },
+    {
+      "path": "content.sample.json",
+      "bytes": 8244,
+      "sha256": "ebdebe38b06944d5dfefe42e95a7fe1db114268f3df0a7ba29cd77767acaee59"
+    },
+    {
+      "path": "design-spec.json",
+      "bytes": 11024,
+      "sha256": "8c326b7922f110078c7c7f3108e4086612aadc4a38931751d26e8979cc9131a3"
+    },
+    {
+      "path": "DESIGN.md",
+      "bytes": 8648,
+      "sha256": "f61e7117edfe0d420cfcad02011c300a344b6304370e42b2ea24d0e9762a695c"
+    },
+    {
+      "path": "HANDOFF.md",
+      "bytes": 3629,
+      "sha256": "11862724e27068a7420790f8c472fdd5d7eb0e9b27e64f90fcb29cd167f592e0"
+    },
+    {
+      "path": "package-lock.json",
+      "bytes": 173400,
+      "sha256": "d68f97db4cddc9b56750bf2c9e2bdc9d03b35d7edc502bf5f1af073b75075638"
+    },
+    {
+      "path": "package.json",
+      "bytes": 403,
+      "sha256": "2db217e9bb56e86df64ad27f3e85a64c6e6c2045e1a9063c49385b73ea9dc2cf"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1203,
+      "sha256": "08eeed5d52e1d06b95210b0b8b57ba961ae6ca1d1f928dcffed0841b9de572ce"
+    },
+    {
+      "path": "SOURCES.md",
+      "bytes": 1975,
+      "sha256": "f794608076b64c10771b0968e5a25eb1f23b814524642a038e04d2a98b77b390"
+    },
+    {
+      "path": "tsconfig.json",
+      "bytes": 110,
+      "sha256": "4095347d4bca5e4977f5374831b706e5986134421bd80a57e25fb3b109bcf764"
+    },
+    {
+      "path": ".agents/skills/astro-preview/SKILL.md",
+      "bytes": 1150,
+      "sha256": "40443094bfb50994010d1cecf1391d799f3ead0a065965298d922e7111b53146"
+    },
+    {
+      "path": ".agents/skills/astro-preview/agents/openai.yaml",
+      "bytes": 201,
+      "sha256": "21d96dbb36d02167bdfbbe1d6852695fc40b06fcbc1f47a9d121c8accc080a5f"
+    },
+    {
+      "path": ".agents/skills/ponytail/SKILL.md",
+      "bytes": 3548,
+      "sha256": "f18008471528f0adde90a560d053f85935eed5cee26c447b7177ad24472bcf32"
+    },
+    {
+      "path": "assets/escudo-referencia.png",
+      "bytes": 446691,
+      "sha256": "b380623828bed7d67134ab965c410839a7f9bfc9be7340aa18a12dee7b1652e5"
+    },
+    {
+      "path": "assets/mockup-latest.png",
+      "bytes": 2115244,
+      "sha256": "4eb6d1a4d18f4321192388cf3e95e4f65f5f8f81bbc62da41de1725e29f25443"
+    },
+    {
+      "path": "docs/implementation/2026-11-01-landing-page.md",
+      "bytes": 1331,
+      "sha256": "55854df2b86937b5faa83bc010cfce10b068fa3bb8d0c38fb92e33b0a240ac12"
+    },
+    {
+      "path": "docs/specs/001-base-editorial-responsiva.md",
+      "bytes": 2786,
+      "sha256": "894626ef7dd687fd3ee422f6e71b072bd2c0e9ec6d2cb516640b08d83c0d06e8"
+    },
+    {
+      "path": "docs/specs/002-hero-e-midia.md",
+      "bytes": 2378,
+      "sha256": "65978997a452779a7b52141cd6ff62c832cae50565841ac55a0cac31321ed641"
+    },
+    {
+      "path": "docs/specs/003-resultados-e-agenda.md",
+      "bytes": 2059,
+      "sha256": "e744c916bd2581adaf3827a4e8340afaef21a66b3e216e62b976f7dfcddd83f2"
+    },
+    {
+      "path": "docs/specs/004-historia-e-pessoas.md",
+      "bytes": 2050,
+      "sha256": "e4ee9272d7720c28670edf9eae40dd0fc55091d37eb335cd4117449b4cc07b4f"
+    },
+    {
+      "path": "docs/specs/README.md",
+      "bytes": 1434,
+      "sha256": "4480121c3609ce87693ccf7132ce2b72945d43703cdbbbbb0addd296425219a3"
+    },
+    {
+      "path": "docs/specs/assets/media-slots-mockup.svg",
+      "bytes": 4547,
+      "sha256": "3d9e3b2d54c9a3bc4060dc4e3e41e6e49f26700e425f4e812e09f1039cb5675c"
+    },
+    {
+      "path": "docs/superpowers/plans/2026-11-01-primeiras-quatro-specs.md",
+      "bytes": 12778,
+      "sha256": "8b6440c2158463c063536ab162fc008792502715e26bdaf5bebc297dbce0fa44"
+    },
+    {
+      "path": "public/brand/escudo-referencia.png",
+      "bytes": 446691,
+      "sha256": "b380623828bed7d67134ab965c410839a7f9bfc9be7340aa18a12dee7b1652e5"
+    },
+    {
+      "path": "src/components/CompetitionHistory.astro",
+      "bytes": 549,
+      "sha256": "bde9ece4ea1f8a88457da2d4788944599feeb3b33f1b096afe615068355e8b6a"
+    },
+    {
+      "path": "src/components/EventAgenda.astro",
+      "bytes": 1210,
+      "sha256": "7005cd49c2d284106617ddf0de729bcecdf0471489579dbae9a1bc660cf5d013"
+    },
+    {
+      "path": "src/components/HeroVideo.astro",
+      "bytes": 1368,
+      "sha256": "005f0e3403d2e1e6b926166ac3a20b2c7a7396a5168a26db259e1ddd533217ca"
+    },
+    {
+      "path": "src/components/HistoryTimeline.astro",
+      "bytes": 745,
+      "sha256": "4f27327e44bc4d9d3e8474996b685d13394a3ad30f85915a259d674c46c72f7d"
+    },
+    {
+      "path": "src/components/IllustrativeNotice.astro",
+      "bytes": 138,
+      "sha256": "8f36e92e6077f32270b46f4557635ba71f76253623fd81195f4945fccfd830ba"
+    },
+    {
+      "path": "src/components/InstagramUpdates.astro",
+      "bytes": 660,
+      "sha256": "b055ea6897ad0ce94b84f524145c567e0392fe2210c92c4cdb9e0e31e101b0ef"
+    },
+    {
+      "path": "src/components/MatchResults.astro",
+      "bytes": 723,
+      "sha256": "3cda423b4cc7f4d3d3593237b9085dd09272fad52477ed334cc4a3bdeb2d6f05"
+    },
+    {
+      "path": "src/components/MediaPlaceholder.astro",
+      "bytes": 621,
+      "sha256": "f8ef45d836f0278fd53d8217052911f65cb198a06dc63da34127242737a3693e"
+    },
+    {
+      "path": "src/components/PartnersSection.astro",
+      "bytes": 553,
+      "sha256": "bf807dcd4a2c3ab491661213adb4921388d1e63ace781b44a2f2c8cb049c2838"
+    },
+    {
+      "path": "src/components/ProjectIntro.astro",
+      "bytes": 461,
+      "sha256": "4757a1c84144ae2b6f4557d4fcfa425bac79731aff6867b433f7915453bdd403"
+    },
+    {
+      "path": "src/components/SectionHeading.astro",
+      "bytes": 290,
+      "sha256": "6ba901c3e4e6ee467abbdae12287f005e6f349e81f14515abb53bc08f9101421"
+    },
+    {
+      "path": "src/components/SiteFooter.astro",
+      "bytes": 687,
+      "sha256": "e9fbff9a313f5728def6cbf4d9085150b5cd4e380052c00e0b7ecea8f48b5413"
+    },
+    {
+      "path": "src/components/SiteHeader.astro",
+      "bytes": 600,
+      "sha256": "315ef2900368747dce2740b47f459c8e28f036821f3548eef69caa0de5059d3a"
+    },
+    {
+      "path": "src/components/StaffSection.astro",
+      "bytes": 661,
+      "sha256": "7b4414a2894111f1f35d9ee7f80a07670221b8a4fddcdd0c6ef194f45efffe53"
+    },
+    {
+      "path": "src/components/TeamsSection.astro",
+      "bytes": 795,
+      "sha256": "5f9f31dbb39fe1ee07a8a13c51f4e3aaf844ed2651523e96de5cfe16f1a7e0f6"
+    },
+    {
+      "path": "src/data/site.json",
+      "bytes": 9052,
+      "sha256": "ede0d2c41bc5471f9ae59dd563525038ff406b2fbef23f81d55ba55b0594042a"
+    },
+    {
+      "path": "src/domain/content.test.ts",
+      "bytes": 4113,
+      "sha256": "4b1824580d2467c2423211bd96bda125ab20cd9e1ec3689f99c66e6f49a32fb8"
+    },
+    {
+      "path": "src/domain/content.ts",
+      "bytes": 4343,
+      "sha256": "7e4610ce6b8bcb102c4248e1d40595a65ccf55878efc6a3113e4bf42aac3362f"
+    },
+    {
+      "path": "src/layouts/BaseLayout.astro",
+      "bytes": 479,
+      "sha256": "55f2db1578548121c2f510b90ec9e98b17fa849b588d3467f8b4f458fa0fdc44"
+    },
+    {
+      "path": "src/pages/index.astro",
+      "bytes": 1696,
+      "sha256": "ee14408d58bc70085c17b38aa539ccff7daa8dea8125f0c02a7b2ebb1380e7c7"
+    },
+    {
+      "path": "src/styles/global.css",
+      "bytes": 12984,
+      "sha256": "da8752ea69e509e792048f3a9e1b4ef84b17c26f768f15a9f83995d90993e9e0"
+    },
+    {
+      "path": "src/types/content.ts",
+      "bytes": 1240,
+      "sha256": "a71f8b450fc1a8a2c5a93b33bcb112fb34673fa85e5103c9c5c152dd49f69683"
+    }
+  ],
+  "imageDimensions": {
+    "escudo-referencia.png": {
+      "width": 640,
+      "height": 640
+    },
+    "mockup-latest.png": {
+      "width": 725,
+      "height": 2170
+    }
+  }
+}

@@ -1,0 +1,44 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import site from '../data/site.json';
+import Header from '../components/SiteHeader.astro';
+import Footer from '../components/SiteFooter.astro';
+import Hero from '../components/HeroVideo.astro';
+import Project from '../components/ProjectIntro.astro';
+import History from '../components/HistoryTimeline.astro';
+import Staff from '../components/StaffSection.astro';
+import Competition from '../components/CompetitionHistory.astro';
+import Results from '../components/MatchResults.astro';
+import Teams from '../components/TeamsSection.astro';
+import Agenda from '../components/EventAgenda.astro';
+import Instagram from '../components/InstagramUpdates.astro';
+import Partners from '../components/PartnersSection.astro';
+import { validateContent } from '../domain/content';
+import type { Match, ProjectEvent } from '../types/content';
+
+const s = site.sections;
+const issues = validateContent({
+  matches: s.resultados.matches as Match[],
+  events: s.participar.events as ProjectEvent[],
+  teams: s.equipes.teams,
+  athletes: s.equipes.athletes
+});
+if (issues.length) throw new Error(JSON.stringify(issues));
+---
+<Layout>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <Header/>
+  <main id="conteudo" tabindex="-1">
+    <Hero content={s.inicio}/>
+    <Project content={s.projeto}/>
+    <History content={s.historia}/>
+    <Staff content={s.comissao}/>
+    <Competition content={s.competicoes}/>
+    <Results content={s.resultados}/>
+    <Teams content={s.equipes}/>
+    <Agenda content={s.participar}/>
+    <Instagram content={s.instagram}/>
+    <Partners content={s.apoiadores}/>
+  </main>
+  <Footer notice={site.notice} contact={s.contato}/>
+</Layout>

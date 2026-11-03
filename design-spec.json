@@ -1,0 +1,432 @@
+{
+  "schemaVersion": "1.0.0",
+  "documentType": "semantic-design-specification",
+  "project": "BASE Vôlei Club",
+  "locale": "pt-BR",
+  "preparedAt": "2026-11-01",
+  "status": "proposed-implementation-baseline",
+  "conversion": {
+    "method": "Interpretação editorial da imagem e das decisões da conversa.",
+    "not": "Extração de DOM, CSS, coordenadas exatas, OCR fiel ou código executável.",
+    "precedence": [
+      "Explicit user decisions",
+      "DESIGN.md and ARCHITECTURE.md",
+      "design-spec.json",
+      "reference image"
+    ],
+    "imageLimitations": [
+      "Composição ainda contém colunas lado a lado.",
+      "Imagem termina na área de Instagram.",
+      "Não demonstra vídeo, animação ou responsividade funcional."
+    ]
+  },
+  "assets": {
+    "referenceMockup": {
+      "path": "assets/mockup-latest.png",
+      "role": "visual-reference-only",
+      "generated": true
+    },
+    "shield": {
+      "path": "assets/escudo-referencia.png",
+      "role": "user-provided-brand-reference",
+      "replacement": "SVG definitivo pendente"
+    },
+    "video": null,
+    "realTeamPhotos": []
+  },
+  "tokens": {
+    "origin": "Propostos para implementação; não extraídos como medidas exatas da imagem.",
+    "colors": {
+      "navy": "#082541",
+      "red": "#D91627",
+      "surface": "#FFFFFF",
+      "surfaceSoft": "#F3F5F7",
+      "textMuted": "#475569",
+      "border": "#D9E0E7"
+    },
+    "typography": {
+      "family": "Inter, system-ui, sans-serif",
+      "weights": [
+        400,
+        500,
+        600,
+        700
+      ],
+      "h1MobilePx": [
+        32,
+        40
+      ],
+      "h1DesktopPx": [
+        48,
+        56
+      ],
+      "h2MobilePx": [
+        24,
+        28
+      ],
+      "h2DesktopPx": [
+        30,
+        36
+      ],
+      "bodyPx": [
+        16,
+        18
+      ],
+      "metaMinPx": 14,
+      "bodyLineHeight": [
+        1.5,
+        1.65
+      ]
+    },
+    "spacingPx": [
+      4,
+      8,
+      12,
+      16,
+      24,
+      32,
+      48,
+      64,
+      80
+    ],
+    "layout": {
+      "mobileGutterPx": 24,
+      "narrowGutterPx": 20,
+      "desktopMaxWidthPx": 1200,
+      "sectionMobilePaddingYPx": [
+        48,
+        64
+      ],
+      "sectionDesktopPaddingYPx": [
+        72,
+        96
+      ],
+      "breakpointsRem": [
+        48,
+        64
+      ],
+      "mobileTextColumns": 1
+    },
+    "radiusPx": {
+      "button": 8,
+      "photo": 8
+    }
+  },
+  "motion": {
+    "base": "CSS with native scrolling",
+    "enhancement": "GSAP + ScrollTrigger",
+    "hero": {
+      "durationMs": [
+        500,
+        700
+      ],
+      "maxTranslateYPx": 16
+    },
+    "reveal": {
+      "durationMs": [
+        300,
+        450
+      ],
+      "maxStaggerMs": 80,
+      "once": true
+    },
+    "mobilePinning": false,
+    "reducedMotion": {
+      "videoBackground": "poster-only",
+      "parallax": false,
+      "reveals": "static-visible",
+      "smoothScroll": "native"
+    },
+    "optionalLibraries": {
+      "motionReact": "Somente em ilha React justificada.",
+      "lenis": "Experimento posterior, sujeito a testes e compatibilidade de scroll."
+    },
+    "propertyOwnershipRule": "GSAP e Motion não controlam a mesma propriedade no mesmo elemento."
+  },
+  "heroVideo": {
+    "posterFirst": true,
+    "decorativeMuted": true,
+    "pauseControlRequired": true,
+    "autoplayGuaranteed": false,
+    "fullStoryPlayRequiresUserAction": true,
+    "fallbackWithoutVideo": {
+      "action": "anchor-to-history",
+      "label": "Conheça o projeto"
+    },
+    "failureMode": "Manter poster e texto; não bloquear leitura."
+  },
+  "sections": [
+    {
+      "id": "inicio",
+      "order": 1,
+      "component": "HeroVideo",
+      "goal": "Propósito social e abertura emocional",
+      "contentRef": "content.sample.json#/sections/inicio",
+      "mobileLayout": "full-bleed-poster",
+      "animation": "hero-title",
+      "surface": "image",
+      "essentialWithoutJavaScript": true
+    },
+    {
+      "id": "projeto",
+      "order": 2,
+      "component": "ProjectIntro",
+      "goal": "Explicar proposta e funcionamento",
+      "contentRef": "content.sample.json#/sections/projeto",
+      "mobileLayout": "vertical-principles",
+      "animation": "reveal",
+      "surface": "light",
+      "essentialWithoutJavaScript": true
+    },
+    {
+      "id": "historia",
+      "order": 3,
+      "component": "HistoryTimeline",
+      "goal": "História e impacto qualitativo",
+      "contentRef": "content.sample.json#/sections/historia",
+      "mobileLayout": "vertical-timeline",
+      "animation": "reveal",
+      "surface": "navy",
+      "essentialWithoutJavaScript": true
+    },
+    {
+      "id": "comissao",
+      "order": 4,
+      "component": "StaffSection",
+      "goal": "Treinador, coordenação e comissão técnica",
+      "contentRef": "content.sample.json#/sections/comissao",
+      "mobileLayout": "stacked-profiles",
+      "animation": "reveal",
+      "surface": "light",
+      "essentialWithoutJavaScript": true
+    },
+    {
+      "id": "competicoes",
+      "order": 5,
+      "component": "CompetitionHistory",
+      "goal": "Eventos, conquistas e premiações confirmados",
+      "contentRef": "content.sample.json#/sections/competicoes",
+      "mobileLayout": "editorial-list",
+      "animation": "reveal",
+      "surface": "light",
+      "essentialWithoutJavaScript": true
+    },
+    {
+      "id": "resultados",
+      "order": 6,
+      "component": "MatchResults",
+      "goal": "Últimas partidas e placares",
+      "contentRef": "content.sample.json#/sections/resultados",
+      "mobileLayout": "compact-rows",
+      "animation": "none",
+      "surface": "light",
+      "essentialWithoutJavaScript": true
+    },
+    {
+      "id": "equipes",
+      "order": 7,
+      "component": "TeamsSection",
+      "goal": "Equipes e atletas",
+      "contentRef": "content.sample.json#/sections/equipes",
+      "mobileLayout": "native-horizontal-track",
+      "animation": "none",
+      "surface": "light",
+      "essentialWithoutJavaScript": true
+    },
+    {
+      "id": "participar",
+      "order": 8,
+      "component": "ParticipationSection",
+      "goal": "Orientações, jogos e peneiras",
+      "contentRef": "content.sample.json#/sections/participar",
+      "mobileLayout": "chronological-list",
+      "animation": "none",
+      "surface": "light",
+      "essentialWithoutJavaScript": true
+    },
+    {
+      "id": "instagram",
+      "order": 9,
+      "component": "InstagramUpdates",
+      "goal": "Informativos e bastidores com links oficiais",
+      "contentRef": "content.sample.json#/sections/instagram",
+      "mobileLayout": "native-horizontal-track",
+      "animation": "none",
+      "surface": "light",
+      "essentialWithoutJavaScript": true
+    },
+    {
+      "id": "apoiadores",
+      "order": 10,
+      "component": "PartnersSection",
+      "goal": "Parceiros e convite secundário de apoio",
+      "contentRef": "content.sample.json#/sections/apoiadores",
+      "mobileLayout": "simple-logo-list",
+      "animation": "reveal",
+      "surface": "light",
+      "essentialWithoutJavaScript": true
+    },
+    {
+      "id": "contato",
+      "order": 11,
+      "component": "Footer",
+      "goal": "Canais e navegação de fechamento",
+      "contentRef": "content.sample.json#/sections/contato",
+      "mobileLayout": "stacked-links",
+      "animation": "none",
+      "surface": "navy",
+      "essentialWithoutJavaScript": true
+    }
+  ],
+  "contracts": {
+    "StaffMember": {
+      "fields": [
+        "id",
+        "name",
+        "role",
+        "bio",
+        "photoSrc",
+        "status"
+      ],
+      "rules": [
+        "Não inventar credenciais.",
+        "Uma pessoa pode ter múltiplas funções."
+      ]
+    },
+    "Milestone": {
+      "fields": [
+        "id",
+        "title",
+        "date",
+        "body",
+        "status"
+      ],
+      "rules": [
+        "Data opcional.",
+        "Não criar anos fictícios."
+      ]
+    },
+    "Match": {
+      "fields": [
+        "id",
+        "teamId",
+        "opponent",
+        "competition",
+        "category",
+        "startsAt",
+        "state",
+        "scoreSets",
+        "setScores",
+        "status"
+      ],
+      "states": [
+        "scheduled",
+        "completed",
+        "postponed",
+        "cancelled"
+      ],
+      "rules": [
+        "Data ISO 8601 com fuso quando conhecida.",
+        "Placar só para partida concluída com resultado confirmado.",
+        "Parciais opcionais.",
+        "Ordenar resultados confirmados por data decrescente."
+      ]
+    },
+    "Event": {
+      "fields": [
+        "id",
+        "type",
+        "title",
+        "startsAt",
+        "location",
+        "category",
+        "state",
+        "registrationState",
+        "contactUrl",
+        "status"
+      ],
+      "types": [
+        "match",
+        "tryout"
+      ],
+      "states": [
+        "planned",
+        "confirmed",
+        "postponed",
+        "cancelled"
+      ],
+      "registrationStates": [
+        "open",
+        "closed",
+        "to-be-confirmed"
+      ],
+      "rules": [
+        "Ordenar programação futura cronologicamente.",
+        "Não anunciar inscrição aberta sem confirmação.",
+        "Definir nova data para adiamento quando conhecida."
+      ]
+    },
+    "Athlete": {
+      "fields": [
+        "id",
+        "teamId",
+        "name",
+        "position",
+        "photoSrc",
+        "status"
+      ],
+      "rules": [
+        "teamId deve existir.",
+        "Não publicar dados pessoais desnecessários."
+      ]
+    },
+    "InstagramPreview": {
+      "fields": [
+        "id",
+        "title",
+        "excerpt",
+        "imageSrc",
+        "permalink",
+        "publishedAt",
+        "status"
+      ],
+      "source": "manual-curation",
+      "rules": [
+        "Sem scraping ou tokens no frontend.",
+        "Sem URL real, renderizar prévia não clicável com aviso.",
+        "Não inventar likes ou comentários."
+      ]
+    }
+  },
+  "editorial": {
+    "statuses": [
+      "draft",
+      "illustrative",
+      "confirmed"
+    ],
+    "prototypeMode": "illustrative",
+    "visibleNoticeRequired": true,
+    "missingUrlValue": null,
+    "officialReleaseRequiresContentReview": true
+  },
+  "accessibility": {
+    "oneH1": true,
+    "visibleFocus": true,
+    "skipLink": true,
+    "controlTargetProposedPx": 44,
+    "keyboardNavigation": true,
+    "carouselSwipeOnly": false,
+    "dialogEscapeAndFocusReturn": true,
+    "contrastMustBeMeasured": true
+  },
+  "validationViewportsPx": [
+    320,
+    360,
+    390,
+    768,
+    1024,
+    1440
+  ],
+  "implementationStatus": "initial-scaffold"
+}
+

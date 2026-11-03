@@ -1,0 +1,38 @@
+---
+import Heading from './SectionHeading.astro';
+import TeamsShowcase from './TeamsShowcase';
+import { getPublicTeams, getPublicAthletes } from '../domain/content';
+
+const { content } = Astro.props;
+const teams = getPublicTeams(content.teams);
+const athletes = getPublicAthletes(content.athletes);
+---
+<section id="equipes">
+  <div class="container">
+    <Heading eyebrow="05 / NOSSAS EQUIPES" title={content.title} description={content.description} />
+    <TeamsShowcase client:visible teams={teams} athletes={athletes} />
+  </div>
+</section>
+
+<noscript>
+  <style is:inline>
+    #equipes .athlete-track.is-coverflow-track {
+      display: flex;
+      min-height: 0;
+      padding-inline: 4px;
+      overflow-x: auto;
+      perspective: none;
+    }
+
+    #equipes .is-coverflow-track .athlete-card--popout {
+      opacity: 1 !important;
+      transform: none !important;
+      pointer-events: auto !important;
+      cursor: auto;
+    }
+
+    #equipes [inert] {
+      display: none;
+    }
+  </style>
+</noscript>

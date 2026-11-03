@@ -1,0 +1,5 @@
+---
+import Heading from './SectionHeading.astro';
+const {content}=Astro.props;
+---
+<section id="projeto"><div class="container"><div class="intro-grid"><Heading eyebrow="01 / O PROJETO" title={content.title}/><p class="lead">{content.description}</p></div><div class="principles">{content.principles.map((p:{title:string;body:string},i:number)=><article><span class="number">0{i+1}</span><h3>{p.title}</h3><p>{p.body}</p></article>)}</div></div></section>

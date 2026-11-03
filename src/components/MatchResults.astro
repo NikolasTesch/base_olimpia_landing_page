@@ -1,0 +1,4 @@
+---
+import Heading from './SectionHeading.astro';import {getRecentCompletedMatches} from '../domain/content';const {content}=Astro.props;const matches=getRecentCompletedMatches(content.matches);
+---
+<section id="resultados"><div class="container"><Heading eyebrow="NA QUADRA" title={content.title}/>{matches.length ? <div class="results">{matches.map(m=><article class="match-row"><div><small>{m.competition}</small><h3>BASE <span>×</span> {m.opponent}</h3></div><strong class="score">{m.scoreSets}</strong><time datetime={m.startsAt!}>{new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo'}).format(new Date(m.startsAt!))}</time></article>)}</div> : <p class="empty">{content.emptyState}</p>}</div></section>

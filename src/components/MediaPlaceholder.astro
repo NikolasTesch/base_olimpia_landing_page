@@ -1,0 +1,9 @@
+---
+interface Props { label:string; ratio?:'wide'|'landscape'|'portrait'|'square'; src?:string|null; alt?:string; loading?:'lazy'|'eager' }
+const {label,ratio='landscape',src,alt,loading='lazy'}=Astro.props;
+if(src && !alt) throw new Error('Mídia editorial exige texto alternativo.');
+---
+<div class:list={['media-frame',`ratio-${ratio}`]}>
+ <div class="media-placeholder"><span class="media-orbit" aria-hidden="true"></span>{!src && <span class="media-label"><small>ESPAÇO PARA IMAGEM</small>{label}</span>}</div>
+ {src && <img src={src} alt={alt} loading={loading} onerror="this.setAttribute('hidden', '')" />}
+</div>

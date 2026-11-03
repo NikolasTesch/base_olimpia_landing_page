@@ -1,0 +1,19 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import OwnerDashboard from '../components/OwnerDashboard';
+import site from '../data/site.json';
+import { getPublicTeams, getPublicAthletes } from '../domain/content';
+import type { Team, Athlete } from '../types/content';
+
+const teams = getPublicTeams(site.sections.equipes.teams as Team[]);
+const athletes = getPublicAthletes(site.sections.equipes.athletes as Athlete[]);
+const instagramPosts = site.sections.instagram.previews ?? [];
+---
+<Layout title="Painel do Dono · BASE Vôlei Club">
+  <OwnerDashboard
+    client:load
+    initialTeams={teams}
+    initialAthletes={athletes}
+    initialPosts={instagramPosts}
+  />
+</Layout>

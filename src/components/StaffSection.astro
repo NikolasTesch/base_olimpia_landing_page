@@ -1,0 +1,4 @@
+---
+import Heading from './SectionHeading.astro';import Media from './MediaPlaceholder.astro';import {getPublicStaffMembers} from '../domain/content';const {content}=Astro.props;
+---
+<section id="comissao" class="staff-highlight"><div class="container"><Heading eyebrow="03 / QUEM FAZ ACONTECER" title={content.title} description={content.description}/><div class="grid profiles staff-profiles">{getPublicStaffMembers(content.members).map(p=><article><Media label="Retrato da comissão técnica" ratio="portrait" src={p.photoSrc} alt={p.photoSrc ? p.name : undefined}/><span class="eyebrow profile-role">{p.role}</span><h3>{p.name}</h3>{p.bio && <p>{p.bio}</p>}</article>)}</div></div></section>

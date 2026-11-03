@@ -1,0 +1,4 @@
+interface:
+  display_name: "BASE Astro Preview"
+  short_description: "Start the local Astro preview"
+  default_prompt: "Use $astro-preview to start the local preview for the BASE Volei Club project."

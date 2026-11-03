@@ -1,0 +1,4 @@
+---
+import Heading from './SectionHeading.astro';const {content}=Astro.props;
+---
+<section id="apoiadores"><div class="container"><Heading eyebrow="08 / APOIO QUE TRANSFORMA" title={content.title} description={content.description}/><div class="partner-slots" aria-label="Espaços demonstrativos de apoiadores">{['Parceiro 01','Parceiro 02','Parceiro 03','Parceiro 04'].map(label=><div>{label}<small>ESPAÇO PARA MARCA</small></div>)}</div><div class="support-callout"><h3>{content.invitation}</h3><p>{content.emptyContact}</p></div></div></section>

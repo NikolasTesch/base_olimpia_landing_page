@@ -1,0 +1,45 @@
+---
+const links = [
+  ['projeto', 'O projeto'],
+  ['historia', 'Nossa história'],
+  ['comissao', 'Comissão'],
+  ['equipes', 'Equipes'],
+];
+---
+<header class="site-header">
+  <nav class="container nav" aria-label="Navegação principal">
+    <a class="brand" href="#inicio">
+      <img src="/brand/escudo.png" width="44" height="44" alt="Escudo do Base Vôlei Club" />
+      <span>BASE<small>VÔLEI CLUB</small></span>
+    </a>
+    <div class="nav-links">
+      {links.map(([id, label]) => <a href={`#${id}`}>{label}</a>)}
+    </div>
+    <a class="nav-join" href="#participar">Participar <span aria-hidden="true">↗</span></a>
+    <details class="nav-mobile">
+      <summary aria-label="Menu de navegação"><span aria-hidden="true"></span></summary>
+      <div class="nav-panel">
+        {links.map(([id, label]) => <a href={`#${id}`}>{label}</a>)}
+        <a href="#participar">Participar <span aria-hidden="true">↗</span></a>
+      </div>
+    </details>
+  </nav>
+</header>
+
+<script>
+  const menu = document.querySelector<HTMLDetailsElement>('.nav-mobile');
+  const toggle = menu?.querySelector('summary');
+
+  menu?.addEventListener('click', (event) => {
+    if (event.target instanceof Element && event.target.closest('a')) {
+      menu.open = false;
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && menu?.open && menu.offsetWidth > 0) {
+      menu.open = false;
+      toggle?.focus();
+    }
+  });
+</script>

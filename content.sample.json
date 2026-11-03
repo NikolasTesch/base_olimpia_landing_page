@@ -1,0 +1,235 @@
+{
+  "schemaVersion": "1.0.0",
+  "locale": "pt-BR",
+  "contentMode": "illustrative",
+  "projectName": "BASE Vôlei Club",
+  "notice": "Apresentação ilustrativa. Textos, fotos e informações serão atualizados com os dados oficiais do projeto.",
+  "officialChannels": {
+    "instagramUrl": null,
+    "contactUrl": null
+  },
+  "sections": {
+    "inicio": {
+      "title": "Muito além da quadra.",
+      "description": "Esporte, convivência e oportunidades para crianças e adolescentes construírem novas histórias.",
+      "primaryAction": {
+        "label": "Conheça o projeto",
+        "href": "#historia",
+        "kind": "anchor"
+      },
+      "videoActionWhenAvailable": "Conheça nossa história",
+      "posterSrc": "/images/hero/hero-poster.webp",
+      "backgroundVideoSrc": null,
+      "storyVideoSrc": null,
+      "mediaStatus": "illustrative"
+    },
+    "projeto": {
+      "title": "O esporte como ponto de encontro.",
+      "description": "A proposta do BASE é oferecer às crianças e aos adolescentes um espaço de convivência e prática esportiva fora do horário escolar. Por meio do vôlei, o projeto busca incentivar uma rotina ativa, o trabalho em equipe e a construção de vínculos.",
+      "principlesTitle": "Como fazemos acontecer",
+      "principles": [
+        {
+          "title": "Treinar",
+          "body": "Aprender os fundamentos do vôlei e desenvolver habilidades com orientação e prática."
+        },
+        {
+          "title": "Conviver",
+          "body": "Compartilhar experiências, respeitar diferenças e aprender a cuidar de si e do coletivo."
+        },
+        {
+          "title": "Competir",
+          "body": "Vivenciar desafios esportivos, valorizando o esforço, a cooperação e o aprendizado em cada partida."
+        }
+      ]
+    },
+    "historia": {
+      "title": "Pessoas e momentos que constroem o BASE.",
+      "description": "Uma história de projeto social também é feita de encontros: o primeiro treino, uma nova amizade, uma dificuldade superada e a descoberta de que cada pessoa tem um lugar no time.",
+      "milestones": [
+        {
+          "id": "origem",
+          "title": "O começo",
+          "date": null,
+          "body": "Um espaço para apresentar a origem do projeto, quem reuniu o grupo e o que motivou os primeiros treinos.",
+          "status": "illustrative"
+        },
+        {
+          "id": "crescimento",
+          "title": "O crescimento",
+          "date": null,
+          "body": "Um espaço para contar como as atividades e a participação da comunidade evoluíram.",
+          "status": "illustrative"
+        },
+        {
+          "id": "construcao",
+          "title": "O que construímos juntos",
+          "date": null,
+          "body": "Um espaço para reunir histórias reais de convivência, desenvolvimento e participação no esporte.",
+          "status": "illustrative"
+        }
+      ],
+      "impact": {
+        "title": "Impacto além do placar.",
+        "body": "O projeto tem como proposta ampliar o acesso à atividade física no contraturno escolar e criar oportunidades de convivência para os jovens. A quadra pode ser um lugar para desenvolver confiança, compromisso e respeito, sem perder o prazer de jogar.",
+        "metrics": [],
+        "testimonials": []
+      },
+      "imageSrc": "/images/historia/historia-memoria.webp"
+    },
+    "comissao": {
+      "title": "Quem conduz o projeto",
+      "description": "Uma equipe comprometida com o esporte e com o desenvolvimento de cada participante.",
+      "members": [
+        {
+          "id": "treinador-exemplo",
+          "name": "Rafael Almeida",
+          "role": "Treinador",
+          "bio": "Acredita no esporte como espaço de aprendizado e acompanha cada etapa dos treinos.",
+          "photoSrc": "/images/staff/treinador-rafael-almeida.webp",
+          "status": "illustrative"
+        },
+        {
+          "id": "coordenacao-exemplo",
+          "name": "Marina Costa",
+          "role": "Coordenação",
+          "bio": "Conecta famílias, equipe e comunidade para fazer o projeto acontecer.",
+          "photoSrc": "/images/staff/coordenacao-marina-costa.webp",
+          "status": "illustrative"
+        },
+        {
+          "id": "comissao-exemplo",
+          "name": "Lucas Ferreira",
+          "role": "Comissão técnica",
+          "bio": "Apoia a evolução das equipes, valorizando a convivência e o trabalho coletivo.",
+          "photoSrc": "/images/staff/comissao-lucas-ferreira.webp",
+          "status": "illustrative"
+        }
+      ]
+    },
+    "competicoes": {
+      "title": "Aprender, competir e seguir evoluindo.",
+      "description": "As competições fazem parte da experiência esportiva: são oportunidades para colocar em prática o que foi treinado, enfrentar novos desafios e representar o trabalho coletivo.",
+      "competitions": [],
+      "achievements": [],
+      "emptyCompetitions": "Em breve, conheça a participação das equipes nos eventos esportivos.",
+      "emptyAchievements": "Este espaço reunirá as conquistas e premiações confirmadas do projeto."
+    },
+    "resultados": {
+      "title": "Últimas partidas",
+      "matches": [],
+      "emptyState": "Os resultados serão apresentados aqui conforme a programação das equipes."
+    },
+    "equipes": {
+      "title": "Cada pessoa faz parte dessa história.",
+      "description": "Conheça as equipes, os atletas e as pessoas que compartilham a rotina de treinos e os desafios dentro da quadra.",
+      "teams": [
+        {
+          "id": "equipe-exemplo",
+          "name": "Nome da equipe",
+          "category": null,
+          "status": "illustrative"
+        }
+      ],
+      "athletes": [
+        {
+          "id": "atleta-0",
+          "teamId": "equipe-exemplo",
+          "name": "Alex Silva",
+          "position": "Levantador",
+          "photoSrc": "/images/athletes/atleta-alex-silva.webp",
+          "status": "illustrative"
+        },
+        {
+          "id": "atleta-1",
+          "teamId": "equipe-exemplo",
+          "name": "Camila Santos",
+          "position": "Ponteira",
+          "photoSrc": "/images/athletes/atleta-camila-santos.webp",
+          "status": "illustrative"
+        },
+        {
+          "id": "atleta-2",
+          "teamId": "equipe-exemplo",
+          "name": "Gabriel Lima",
+          "position": "Central",
+          "photoSrc": "/images/athletes/atleta-gabriel-lima.webp",
+          "status": "illustrative"
+        },
+        {
+          "id": "atleta-3",
+          "teamId": "equipe-mare-exemplo",
+          "name": "João Martins",
+          "position": "Oposto",
+          "photoSrc": "/images/athletes/atleta-joao-martins.webp",
+          "status": "illustrative"
+        },
+        {
+          "id": "atleta-4",
+          "teamId": "equipe-mare-exemplo",
+          "name": "Beatriz Rocha",
+          "position": "Líbero",
+          "photoSrc": "/images/athletes/atleta-beatriz-rocha.webp",
+          "status": "illustrative"
+        },
+        {
+          "id": "atleta-5",
+          "teamId": "equipe-mare-exemplo",
+          "name": "Pedro Nunes",
+          "position": "Ponteiro",
+          "photoSrc": "/images/athletes/atleta-pedro-nunes.webp",
+          "status": "illustrative"
+        }
+      ]
+    },
+    "participar": {
+      "title": "Quer fazer parte do BASE?",
+      "description": "As informações sobre equipes, horários, critérios de participação e próximas peneiras serão divulgadas pelos canais oficiais do projeto. Crianças e adolescentes interessados poderão conhecer as orientações de participação junto de seus responsáveis.",
+      "events": [],
+      "emptyAgenda": "A programação de jogos e peneiras será divulgada em breve.",
+      "noOpenTryout": "Acompanhe os próximos avisos para saber quando haverá novas oportunidades de participação.",
+      "contactUrl": null
+    },
+    "instagram": {
+      "title": "Acompanhe o BASE.",
+      "description": "Treinos, bastidores, avisos e momentos que ajudam a conhecer o dia a dia do projeto.",
+      "profileUrl": null,
+      "previews": [
+        {
+          "id": "treinos-exemplo",
+          "title": "Rotina de treinos",
+          "excerpt": "Um espaço para compartilhar o aprendizado e a convivência dentro da quadra.",
+          "imageSrc": "/images/instagram/instagram-treinos.webp",
+          "permalink": null,
+          "publishedAt": null,
+          "status": "illustrative"
+        },
+        {
+          "id": "avisos-exemplo",
+          "title": "Avisos do projeto",
+          "excerpt": "Informações sobre atividades, programação e oportunidades de participação.",
+          "imageSrc": "/images/instagram/instagram-avisos.webp",
+          "permalink": null,
+          "publishedAt": null,
+          "status": "illustrative"
+        }
+      ],
+      "actionLabel": "Ver no Instagram",
+      "emptyState": "O perfil oficial será informado em breve."
+    },
+    "apoiadores": {
+      "title": "Quem joga junto.",
+      "description": "Apoiar o esporte também é participar das oportunidades que ele pode criar. Este espaço será dedicado às pessoas e às empresas que caminham junto do projeto.",
+      "partners": [],
+      "placeholderLabel": "Espaço para marcas parceiras",
+      "invitation": "Sua empresa pode fazer parte dessa história.",
+      "actionLabel": "Converse com o BASE",
+      "contactUrl": null,
+      "emptyContact": "Em breve, informações para contato e parcerias."
+    },
+    "contato": {
+      "title": "BASE Vôlei Club",
+      "contactUrl": null,
+      "instagramUrl": null
+    }
+  }
+}

@@ -1,0 +1,121 @@
+.ambient-surface {
+  position: relative;
+  isolation: isolate;
+  overflow: clip;
+}
+
+.ambient-surface > .container {
+  position: relative;
+  z-index: 1;
+}
+
+.ambient-field {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  color: rgb(8 37 65 / 15%);
+  --ambient-accent: rgb(184 28 48 / 26%);
+}
+
+.dark .ambient-field {
+  color: rgb(255 255 255 / 19%);
+  --ambient-accent: rgb(255 104 120 / 37%);
+}
+
+.ambient-court,
+.ambient-light,
+.ambient-beam {
+  position: absolute;
+  right: -6%;
+  top: 0;
+  width: clamp(300px, 55vw, 760px);
+  height: 100%;
+}
+
+.ambient-surface:nth-child(even) .ambient-field {
+  transform: scaleX(-1);
+}
+
+.ambient-court path {
+  stroke: currentColor;
+  stroke-width: 1.5;
+  fill: none;
+}
+
+.ambient-court .ambient-net {
+  stroke-dasharray: 7 7;
+}
+
+.ambient-court .ambient-trajectory {
+  stroke: var(--ambient-accent);
+  stroke-dasharray: 10 8;
+  stroke-width: 2;
+}
+
+.ambient-court circle {
+  fill: var(--ambient-accent);
+}
+
+.ambient-light {
+  background: radial-gradient(ellipse, var(--ambient-accent), transparent 65%);
+  opacity: .45;
+}
+
+.ambient-beam {
+  right: 12%;
+  width: clamp(32px, 8vw, 120px);
+  background: linear-gradient(transparent, currentColor, transparent);
+  opacity: .28;
+  transform: skewX(-18deg);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .ambient-court,
+  .ambient-light,
+  .ambient-beam {
+    animation: ambient-drift 15s ease-in-out infinite alternate paused;
+  }
+
+  .ambient-light { animation-delay: -7s; }
+  .ambient-beam { animation-delay: -4s; }
+
+  .ambient-court .ambient-trajectory {
+    animation: ambient-trajectory 5s linear infinite paused;
+  }
+
+  html:not([data-ambient-paused]) [data-ambient-visible]
+    :is(.ambient-court, .ambient-light, .ambient-beam, .ambient-trajectory) {
+    animation-play-state: running;
+  }
+}
+
+@keyframes ambient-drift {
+  to { translate: -30px 22px; }
+}
+
+@keyframes ambient-trajectory {
+  to { stroke-dashoffset: -90; }
+}
+
+@media (min-width: 1200px) {
+  .ambient-field {
+    background:
+      radial-gradient(ellipse 38% 95% at 0% 78%, rgb(8 37 65 / 10%), transparent),
+      radial-gradient(ellipse 35% 85% at 100% 18%, rgb(184 28 48 / 10%), transparent);
+  }
+
+  .dark .ambient-field {
+    background:
+      radial-gradient(ellipse 38% 95% at 0% 78%, rgb(60 122 177 / 28%), transparent),
+      radial-gradient(ellipse 35% 85% at 100% 18%, rgb(255 104 120 / 17%), transparent);
+  }
+
+  .ambient-court {
+    width: clamp(760px, 60vw, 1360px);
+  }
+
+  .ambient-light {
+    width: clamp(760px, 72vw, 1600px);
+  }
+}

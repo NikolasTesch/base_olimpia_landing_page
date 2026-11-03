@@ -1,0 +1,18 @@
+---
+import InstagramFeed from './InstagramFeed';
+
+const { content } = Astro.props;
+---
+<section id="instagram" class="soft">
+  <InstagramFeed
+    client:visible
+    initialPreviews={content.previews}
+    title={content.title}
+    description={content.description}
+    profileUrl={content.profileUrl}
+    profileFemininoUrl={content.profileFemininoUrl}
+    actionLabel={content.actionLabel}
+    actionFemininoLabel={content.actionFemininoLabel}
+    emptyState={content.emptyState}
+  />
+</section>
