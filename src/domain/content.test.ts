@@ -7,6 +7,7 @@ import {
   getPublicMilestones,
   getPublicStaffMembers,
   getPublicAthletes,
+  getPublicPartners,
 } from "./content";
 import type { Match, ProjectEvent } from "../types/content";
 const match: Match = {
@@ -138,5 +139,25 @@ describe("conteúdo público", () => {
       position: null,
       photoSrc: null,
     });
+    const partner = {
+      id: "part-1",
+      name: "Parceiro A",
+      category: "Patrocinador",
+      logoSrc: "/images/apoiadores/logo.webp",
+      url: "https://example.com",
+      status: "confirmed",
+      privateInternalNotes: "sigiloso",
+    } as const;
+    expect(getPublicPartners([partner])[0]).not.toHaveProperty(
+      "privateInternalNotes",
+    );
+    expect(getPublicPartners([partner])[0]).toEqual({
+      id: "part-1",
+      name: "Parceiro A",
+      category: "Patrocinador",
+      logoSrc: "/images/apoiadores/logo.webp",
+      url: "https://example.com",
+    });
+    expect(getPublicPartners([{ ...partner, status: "draft" }])).toEqual([]);
   });
 });

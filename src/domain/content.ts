@@ -5,6 +5,7 @@ import type {
   StaffMember,
   Team,
   Athlete,
+  Partner,
 } from "../types/content";
 const publicItem = (item: { status: string }) => item.status !== "draft";
 const validDate = (value: string | null) => {
@@ -157,4 +158,14 @@ export const getPublicAthletes = (items: readonly Athlete[]) =>
       photoScale,
       photoOffsetX,
       photoOffsetY,
+    }));
+export const getPublicPartners = (items: readonly Partner[]) =>
+  items
+    .filter(publicItem)
+    .map(({ id, name, category, logoSrc, url }) => ({
+      id,
+      name,
+      category,
+      logoSrc,
+      url,
     }));

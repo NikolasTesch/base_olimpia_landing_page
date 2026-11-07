@@ -48,3 +48,9 @@ export interface Athlete extends EditorialItem {
   photoOffsetX?: number;
   photoOffsetY?: number;
 }
+export interface Partner extends EditorialItem {
+  name: string;
+  category?: string | null;
+  logoSrc: string;
+  url?: string | null;
+}

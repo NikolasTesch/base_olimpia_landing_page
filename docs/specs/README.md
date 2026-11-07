@@ -15,6 +15,7 @@ Specs descrevem comportamento e critérios de aceite antes da implementação. A
 | SPEC-007 | [Background tático e stack completa de animação](007-background-tatico-e-stack-animacao.md) | Implementada e validada (`check`, `test`, `build`) | SPEC-005 e SPEC-006; adota GSAP/ScrollTrigger, Lenis e React/Motion com quadra tática em camadas |
 | SPEC-008 | [Apresentação de atletas: Coverflow 3D em Loop e Pop-Out](008-apresentacao-atletas-coverflow-popout.md) | Implementada e validada (`check`, `test`, `build`) | SPEC-004 e SPEC-007; atletas recortados sem fundo em escudo esportivo e carrossel Coverflow em loop |
 | SPEC-009 | [Giro 3.3s e Painel do Dono (`/dono`)](009-painel-dono-equipes-atletas.md) | Implementada e validada (`check`, `test`, `build`) | SPEC-008; giro automático de 3.3s sem botão de giro e painel `/dono` com persistência híbrida |
+| SPEC-010 | [Patrocinadores e Apoiadores](010-patrocinadores-e-apoiadores.md) | Implementada e validada (`check`, `test`, `build`) | SPEC-001 e SPEC-007; marcas reais em cards dedicados com convite de apoio |
 
 Cada spec pode avançar para implementação depois de revisada. Nenhuma delas autoriza publicar dados reais, coletar inscrições, integrar serviços ou fazer deploy.
 

@@ -302,13 +302,38 @@
     },
     "apoiadores": {
       "title": "Quem joga junto.",
-      "description": "Apoiar o esporte também é participar das oportunidades que ele pode criar. Este espaço será dedicado às pessoas e às empresas que caminham junto do projeto.",
-      "partners": [],
-      "placeholderLabel": "Espaço para marcas parceiras",
+      "description": "Apoiar o esporte também é participar das oportunidades que ele pode criar. Conheça as marcas que caminham junto do BASE e fortalecem o voleibol.",
+      "partners": [
+        {
+          "id": "cst-impermeabilizacao",
+          "name": "CST Impermeabilização",
+          "category": "Patrocinador Oficial",
+          "logoSrc": "/images/apoiadores/cst-impermeabilizacao.webp",
+          "url": null,
+          "status": "confirmed"
+        },
+        {
+          "id": "fase",
+          "name": "FASE",
+          "category": "Patrocinador Oficial",
+          "logoSrc": "/images/apoiadores/fase.webp",
+          "url": null,
+          "status": "confirmed"
+        },
+        {
+          "id": "33-veiculos",
+          "name": "33 Veículos",
+          "category": "Patrocinador Oficial",
+          "logoSrc": "/images/apoiadores/33-veiculos.webp",
+          "url": null,
+          "status": "confirmed"
+        }
+      ],
+      "placeholderLabel": "Espaço para novas marcas parceiras",
       "invitation": "Sua empresa pode fazer parte dessa história.",
       "actionLabel": "Converse com o BASE",
-      "contactUrl": null,
-      "emptyContact": "Em breve, informações para contato e parcerias."
+      "contactUrl": "https://wa.me/5527997282733",
+      "emptyContact": "Entre em contato e descubra como sua marca pode transformar vidas através do esporte."
     },
     "contato": {
       "title": "BASE Vôlei Club",

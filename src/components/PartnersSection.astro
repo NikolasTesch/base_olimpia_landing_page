@@ -1,4 +1,117 @@
 ---
-import Heading from './SectionHeading.astro';const {content}=Astro.props;
+import Heading from './SectionHeading.astro';
+import { getPublicPartners } from '../domain/content';
+import type { Partner } from '../types/content';
+
+interface Props {
+  content: {
+    title: string;
+    description: string;
+    partners?: Array<{
+      id: string;
+      name: string;
+      category?: string | null;
+      logoSrc: string;
+      url?: string | null;
+      status: string;
+    }>;
+    placeholderLabel?: string;
+    invitation?: string;
+    actionLabel?: string;
+    contactUrl?: string | null;
+    emptyContact?: string;
+  };
+}
+
+const { content } = Astro.props;
+const partners = getPublicPartners((content.partners ?? []) as Partner[]);
+const placeholderLabel = content.placeholderLabel ?? 'Espaço para novas marcas parceiras';
+const contactUrl = content.contactUrl ?? 'https://wa.me/5527997282733';
+const actionLabel = content.actionLabel ?? 'Converse com o BASE';
 ---
-<section id="apoiadores"><div class="container"><Heading eyebrow="08 / APOIO QUE TRANSFORMA" title={content.title} description={content.description}/><div class="partner-slots" aria-label="Espaços demonstrativos de apoiadores">{['Parceiro 01','Parceiro 02','Parceiro 03','Parceiro 04'].map(label=><div>{label}<small>ESPAÇO PARA MARCA</small></div>)}</div><div class="support-callout"><h3>{content.invitation}</h3><p>{content.emptyContact}</p></div></div></section>
+
+<section id="apoiadores" class="partners-section">
+  <div class="container">
+    <Heading
+      eyebrow="08 / APOIO QUE TRANSFORMA"
+      title={content.title}
+      description={content.description}
+    />
+
+    <div class="partner-slots" aria-label="Patrocinadores e apoiadores oficiais do BASE Vôlei Club">
+      {partners.map((partner) => (
+        <div class="partner-slot partner-card" data-partner-id={partner.id}>
+          {partner.url ? (
+            <a
+              href={partner.url}
+              class="partner-inner partner-inner-link"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${partner.name} - ${partner.category ?? 'Patrocinador Oficial'}`}
+            >
+              <div class="partner-logo-box">
+                <img
+                  src={partner.logoSrc}
+                  alt={`Logo ${partner.name}`}
+                  class="partner-logo"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="partner-meta">
+                <span class="partner-name">{partner.name}</span>
+                {partner.category && <span class="partner-badge">{partner.category}</span>}
+              </div>
+            </a>
+          ) : (
+            <div class="partner-inner">
+              <div class="partner-logo-box">
+                <img
+                  src={partner.logoSrc}
+                  alt={`Logo ${partner.name}`}
+                  class="partner-logo"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </div>
+              <div class="partner-meta">
+                <span class="partner-name">{partner.name}</span>
+                {partner.category && <span class="partner-badge">{partner.category}</span>}
+              </div>
+            </div>
+          )}
+        </div>
+      ))}
+
+      <div class="partner-slot partner-card partner-card-cta">
+        <a
+          href={contactUrl}
+          class="partner-inner partner-cta-box"
+          target={contactUrl.startsWith('http') ? '_blank' : undefined}
+          rel={contactUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
+          aria-label="Espaço para nova marca parceira - Entre em contato com o BASE"
+        >
+          <span class="partner-cta-icon" aria-hidden="true">+</span>
+          <span class="partner-cta-title">Sua Marca Aqui</span>
+          <small class="partner-cta-subtitle">{placeholderLabel}</small>
+        </a>
+      </div>
+    </div>
+
+    <div class="support-callout">
+      <div class="support-callout-text">
+        <h3>{content.invitation}</h3>
+        {content.emptyContact && <p>{content.emptyContact}</p>}
+      </div>
+      <a
+        href={contactUrl}
+        class="button button-small partner-callout-btn"
+        target={contactUrl.startsWith('http') ? '_blank' : undefined}
+        rel={contactUrl.startsWith('http') ? 'noopener noreferrer' : undefined}
+      >
+        <span>{actionLabel}</span>
+        <span class="button-arrow" aria-hidden="true">↗</span>
+      </a>
+    </div>
+  </div>
+</section>
